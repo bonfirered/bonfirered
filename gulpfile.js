@@ -63,6 +63,13 @@ const config = {
       watch: 'src/assets/toolkit/images/**/*',
     },
   },
+	fonts: {
+		toolkit: {
+			src: 'src/assets/toolkit/fonts/*.*',
+			dest: 'dist/assets/toolkit/fonts',
+			watch: 'src/assets/toolkit/fonts/*.*',
+		},
+	}, 
   templates: {
     watch: 'src/**/*.{html,md,json,yml}',
   },
@@ -132,6 +139,13 @@ function imgMinification() {
     .pipe(gulp.dest(config.images.toolkit.dest));
 }
 const images = gulp.series(imgFavicon, imgMinification);
+
+// fonts
+function fonts() {
+	return gulp
+		.src(config.fonts.toolkit.src)
+		.pipe(gulp.dest(config.fonts.toolkit.dest));
+}
 
 // assembly
 function assembler(done) {
@@ -229,9 +243,14 @@ function watch() {
     { interval: 500 },
     gulp.series(styles, reload)
   );
+  gulp.watch(
+		config.fonts.toolkit.watch,
+		{ interval: 500 },
+		gulp.series(fonts, reload)
+	);
 }
 
 // default build task
-let tasks = [clean, styles, scripts, images, assembler];
+let tasks = [clean, styles, scripts, images, assembler, fonts];
 if (config.dev) tasks = tasks.concat([serve, watch]);
 gulp.task('default', gulp.series(tasks));

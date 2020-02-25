@@ -1,0 +1,34 @@
+// Fonts
+
+// AlternateGothic-No2
+@font-face {
+  font-family: 'AlternateGothic-No2';
+  src: url('/assets/toolkit/fonts/AlternateGothic-No2.eot') format('embedded-opentype'),
+       url('/assets/toolkit/fonts/AlternateGothic-No2.ttf') format('truetype'),
+       url('/assets/toolkit/fonts/AlternateGothic-No2.svg#AlternateGothic-No2') format('svg'),
+       url('/assets/toolkit/fonts/AlternateGothic-No2.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Sanchez Regular
+@font-face {
+    font-family: 'sanchez-regular';
+    src: url('/assets/toolkit/fonts/sanchez-regular-webfont.woff2') format('woff2'),
+         url('/assets/toolkit/fonts/sanchez-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Sanchez Italic
+@font-face {
+  font-family: 'sanchez-italic';
+  src: url('/assets/toolkit/fonts/sanchez-italic-webfont.woff2') format('woff2'),
+       url('/assets/toolkit/fonts/sanchez-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font-family-sans-serif: 'AlternateGothic-No2', sans-serif;
+$font-family-serif: 'sanchez-regular';
+$font-family-serif-italic: 'sanchez-italic';
