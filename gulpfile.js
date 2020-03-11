@@ -153,6 +153,7 @@ function assembler(done) {
     logErrors: config.dev,
     dest: config.dest,
     helpers: {
+      setVariable: require('./helpers/setVariable.js'),
       // {{ default description "string of content used if description var is undefined" }}
       default: function defaultFn(...args) {
         return args.find(value => !!value);

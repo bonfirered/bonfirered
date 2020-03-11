@@ -1,0 +1,85 @@
+// Nav
+
+.nav {
+  &__main {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+
+    > li {
+      position: relative;
+      display: inline-flex;
+      margin-left: 85px;
+      padding-top: 35px;
+      font-family: $sans-serif;
+      font-size: 22px;
+      letter-spacing: 1.22px;
+      line-height: 18px;
+      text-transform: uppercase;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      a {
+        color: $white;
+        text-decoration: none;
+        opacity: .4;
+        transition: opacity 0.3s;
+
+        &.active,
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__sub {
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    list-style-type: none;
+    padding-left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &--section {
+      position: relative;
+      bottom: 0;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    > li {
+      margin-bottom: 18px;
+      font-family: $serif;
+      font-size: 12px;
+      line-height: 16px;
+      text-transform: none;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        color: $dirty-white;
+        letter-spacing: 0;
+        text-decoration: none;
+        opacity: 1;
+        transition: color 0.3s;
+
+        &.active,
+        &:hover {
+          color: $bonfire-red;
+        }
+      }
+    }
+  }
+}

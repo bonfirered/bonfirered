@@ -1,4 +1,14 @@
 // Toolkit styles
 
+@import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '../../../../node_modules/bootstrap/scss/bootstrap';
+
+@import 'global/vars';
 @import 'global/fonts';
 @import 'global/base';
+@import 'global/flex';
+@import 'global/titles';
+@import 'global/lists';
+@import 'global/sections';
+
+@import 'components/nav';

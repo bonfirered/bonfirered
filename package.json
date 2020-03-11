@@ -64,7 +64,11 @@
     "webpack": "^4.26.0"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.0.0"
+    "@babel/polyfill": "^7.0.0",
+    "bootstrap": "^4.4.1",
+    "fullpage.js": "^3.0.8",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.1"
   },
   "optionalDependencies": {}
 }

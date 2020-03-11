@@ -1,0 +1,33 @@
+// Titles
+
+.title {
+  font-family: $sans-serif;
+  text-transform: uppercase;
+
+  &--lg {
+    margin-bottom: 35px;
+    font-size: 130px;
+    letter-spacing: 3.71px;
+    line-height: 100px;
+  }
+
+  &--md {
+    color: $judge-grey;
+    font-size: 90px;
+    letter-spacing: 2.57px;
+    line-height: 70px;
+    opacity: 0.25;
+  }
+
+  &--sm {
+    font-size: 50px;
+    letter-spacing: 1.43px;
+    line-height: 42px;
+  }
+
+  &--xs {
+    font-size: 22px;
+    letter-spacing: 1.22px;
+    line-height: 18px;
+  }
+}

@@ -1,0 +1,17 @@
+.section {
+  display: flex;
+  min-height: $vh;
+  padding: 90px 65px;
+
+  &__nav {
+    @include make-col(3);
+  }
+
+  &__title {
+    margin-top: 35px;
+  }
+
+  &__content {
+    @include make-col(7);
+  }
+}
