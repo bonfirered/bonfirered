@@ -1,0 +1,81 @@
+.diamonds {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+
+  &__item {
+    position: absolute;
+
+    &--1 {
+      height: 118px;
+      width: 69px;
+
+      .section__landing & {
+        left: 165px;
+        bottom: 80px;
+      }
+
+      .section__brand-pillars & {
+        top: 240px;
+        left: 375px;
+      }
+    }
+
+    &--2 {
+      height: 64px;
+      width: 37px;
+
+      .section__landing & {
+        left: -18px;
+        bottom: 190px;
+      }
+
+      .section__brand-pillars & {
+        top: 413px;
+        left: 329px;
+        z-index: 1;
+      }
+    }
+
+    &--3 {
+      height: 42px;
+      width: 25px;
+      
+      .section__landing & {
+        left: 109px;
+        bottom: -4px;
+      }
+
+      .section__brand-pillars & {
+        top: 240px;
+        left: 231px;
+      }
+    }
+
+    &--4 {
+      height: 26px;
+      width: 16px;
+
+      .section__landing & {
+        left: 51px;
+        bottom: 262px;
+      }
+
+      .section__brand-pillars & {
+        top: 180px;
+        left: 302px;
+      }
+    }
+
+    &--5 {
+      height: 18px;
+      width: 10px;
+
+      .section__landing & {
+        left: 0;
+        bottom: 295px;
+      }
+    }
+  }
+}

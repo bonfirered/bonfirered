@@ -6,10 +6,13 @@
 @import 'global/vars';
 @import 'global/fonts';
 @import 'global/base';
-@import 'global/logos';
 @import 'global/flex';
 @import 'global/titles';
 @import 'global/lists';
 @import 'global/sections';
 
 @import 'components/nav';
+@import 'components/logo-lockup';
+
+@import 'elements/diamonds';
+@import 'elements/logos';

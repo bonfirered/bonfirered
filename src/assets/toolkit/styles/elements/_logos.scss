@@ -1,0 +1,23 @@
+.logos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba($judge-grey, 0.6);
+
+  &__item {
+    @include make-col(5.75);
+    padding: 119px 78px;
+    text-align: center;
+
+    &--dark {
+      background-color: $dirty-white;
+      border: 1px solid $dirty-white;
+    }
+
+    &--light {
+      border: 1px solid rgba($judge-grey, 0.6);
+    }
+  }
+}

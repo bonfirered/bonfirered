@@ -1,0 +1,8 @@
+.cards {
+  display: flex;
+
+  &__item {
+    @include make-col(3);
+    border-top: 1px solid rgba($judge-grey, 0.6);
+  }
+}

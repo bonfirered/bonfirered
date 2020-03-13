@@ -1,4 +1,6 @@
 .section {
+  $this: &;
+
   position: relative;
   z-index: 1;
   display: flex;
@@ -17,10 +19,11 @@
   }
 
   &__content {
-    @include make-col(7);
+    @include make-col(6);
+    position: relative;
 
     &-subtitle {
-      margin: 15px 0 185px;
+      margin: 15px 0 0;
       font-family: $sans-serif;
       font-size: 40px;
       letter-spacing: 0.8px;
@@ -32,6 +35,10 @@
   &__landing {
     background-image: url('/assets/toolkit/images/bg--section.png');
     background-size: cover;
+
+    #{$this} {
+      padding: 60px 0 60px 65px;
+    }
   }
 
   &__overlay {
@@ -69,6 +76,14 @@
 
     &:last-child {
       right: 200px;
+    }
+  }
+
+  &__inner {
+    position: relative;
+
+    #{$this} {
+      padding: 60px 0 90px 100px;
     }
   }
 }

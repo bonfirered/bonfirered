@@ -1,0 +1,33 @@
+.logo-lockup {
+  position: absolute;
+  top: 60px;
+  left: 65px;
+
+  &--vert {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    border-right: 1px solid rgba($judge-grey, 0.6);
+
+    img {
+      position: relative;
+    }
+
+    .logo {
+      top: 107px;
+      left: -27px;
+      width: 134px;
+      transform: rotate(-90deg);
+    }
+
+    .diamond {
+      top: calc(100% - 148px);
+      left: 50%;
+      bottom: 90px;
+      width: 10px;
+      transform: translateX(-50%);
+    }
+  }
+}
