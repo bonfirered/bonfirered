@@ -1,0 +1,60 @@
+.typography {
+  &__title {
+    margin: 155px 0 50px;
+    font-family: $sans-serif;
+    font-size: 120px;
+    letter-spacing: 2.4px;
+    line-height: 100px;
+  }
+
+  &__text {
+    height: 180px;
+    width: 100%;
+    padding: 20px 30px;
+    margin-top: 23px;
+    border: none;
+    background-color: rgba($judge-grey, 0.25);
+    color: rgba($dirty-white, 0.3);
+    font-family: $sans-serif;
+    font-size: 32px;
+    letter-spacing: 0.64px;
+    line-height: 35px;
+    text-transform: uppercase;
+    resize: none;
+  }
+
+  &__slider {
+    input[type='range'] {
+      height: 2px;
+      width: 146px;
+      background-color: rgba($judge-grey, 0.6);
+      appearance: none;
+      -webkit-appearance: none;
+      outline: none;
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        background: #4CAF50;
+        cursor: pointer;
+      }
+      
+      &::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        background: #4CAF50;
+        cursor: pointer;
+      }
+    }
+  }
+
+  p {
+    margin: 30px 0 10px;
+    padding-top: 20px;
+    border-top: 1px solid rgba($judge-grey, 0.6);
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
