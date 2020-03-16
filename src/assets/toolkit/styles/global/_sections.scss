@@ -30,6 +30,10 @@
       line-height: 68px;
       text-transform: uppercase;
     }
+
+    &--alt {
+      @include make-col(4.35);
+    }
   }
 
   &__landing {
