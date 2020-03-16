@@ -1,0 +1,92 @@
+.colors {
+  display: flex;
+
+  &__item {
+    @include make-col(4);
+  }
+
+  &__circle {
+    width: 141px;
+    height: 141px;
+    margin: 23px 0 34px;
+    border-radius: 50%;
+
+    &--ash-black {
+      background-color: $ash-black;
+      border: 1px solid rgba($judge-grey, 0.6);
+    }
+
+    &--bonfire-red {
+      background-color: $bonfire-red;
+      border: 1px solid $bonfire-red;
+    }
+
+    &--dirty-white {
+      background-color: $dirty-white;
+      border: 1px solid $dirty-white;
+    }
+
+    &--white {
+      background-color: $white;
+      border: 1px solid $white;
+    }
+
+    &--judge-grey {
+      background-color: $judge-grey;
+      border: 1px solid $judge-grey;
+    }
+  }
+
+  &__title,
+  &__list {
+    padding-left: 23px;
+  }
+
+  &__list {
+    list-style-type: none;
+    margin-top: 15px;
+
+    li {
+      font-size: 12px;
+      line-height: 24px;
+
+      span {
+        display: inline-block;
+        width: 55px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__hierarchy {
+    display: flex;
+    height: 40px;
+    margin-top: 20px;
+
+    &--ash-black {
+      width: 33.8%;
+      background-color: $ash-black;
+      border: 1px solid rgba($judge-grey, 0.6);
+    }
+
+    &--dirty-white {
+      width: 33.8%;
+      background-color: $dirty-white;
+    }
+
+    &--bonfire-red {
+      width: 15.2%;
+      background-color: $bonfire-red;
+    }
+
+    &--judge-grey {
+      width: 8.9%;
+      background-color: $judge-grey;
+    }
+
+    &--white {
+      width: 8.9%;
+      background-color: $white;
+    }
+  }
+}
