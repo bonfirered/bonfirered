@@ -1,28 +1,21 @@
-.cards {
+.grid {
   $this: &;
 
   display: flex;
+  flex-wrap: wrap;
   margin: 0 -15px;
 
-  &__top {
-    margin: 30px 0 75px;
-    text-align: center;
-
-    &--alt {
-      margin-top: 180px;
-    }
-  }
-
   &__item {
-    @include make-col(3);
+    @include make-col(6);
+    margin-top: 40px;
     padding: 0 15px;
 
     #{$this}__img {
       display: flex;
-      flex-direction: column;
       align-items: center;
-      justify-content: flex-end;
-      height: 100px;
+      justify-content: center;
+      height: 240px;
+      background-color: $dirty-white;
     }
 
     .title {
