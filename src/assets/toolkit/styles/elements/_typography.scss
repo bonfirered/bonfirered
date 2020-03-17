@@ -1,4 +1,6 @@
 .typography {
+  $this: &;
+
   &__title {
     margin: 155px 0 50px;
     font-family: $sans-serif;
@@ -8,7 +10,7 @@
   }
 
   &__text {
-    height: 180px;
+    height: 220px;
     width: 100%;
     padding: 20px 30px;
     margin-top: 23px;
@@ -21,31 +23,71 @@
     line-height: 35px;
     text-transform: uppercase;
     resize: none;
+
+    &.regular {
+      font-style: regular;
+    }
+
+    &.italic {
+      font-style: italic;
+    }
   }
 
-  &__slider {
-    input[type='range'] {
-      height: 2px;
-      width: 146px;
-      background-color: rgba($judge-grey, 0.6);
-      appearance: none;
-      -webkit-appearance: none;
-      outline: none;
+  &__options {
+    display: flex;
 
-      &::-webkit-slider-thumb {
+    #{$this}__size {
+      position: relative;
+      top: 2px;
+      width: 30px;
+      margin-right: 10px;
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    #{$this}__slider {
+      position: relative;
+
+      input[type='range'] {
+        background: linear-gradient(to right, $bonfire-red 0%, $bonfire-red 32%, $judge-grey 32%, $judge-grey 100%);
+        height: 2px;
+        width: 146px;
+        outline: none; 
+        transition: background 450ms ease-in;
         -webkit-appearance: none;
-        appearance: none;
-        width: 25px;
-        height: 25px;
-        background: #4CAF50;
-        cursor: pointer;
+  
+        &::-webkit-slider-thumb {
+          background-image: url('/assets/toolkit/images/icon--diamond-slider.svg');
+          height: 12px;
+          width: 8px;
+          -webkit-appearance: none;
+        }
       }
+    }
+
+    #{$this}__style {
+      position: relative;
+      margin-left: 38px;
       
-      &::-moz-range-thumb {
-        width: 25px;
-        height: 25px;
-        background: #4CAF50;
-        cursor: pointer;
+      select {
+        background: none;
+        border: none;
+        border-radius: 0;
+        padding-right: 18px;
+        color: $dirty-white;
+        font-size: 10px;
+        line-height: 12px;
+        appearance: none;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 9px;
+        height: 5px;
+        background-image: url('/assets/toolkit/images/icon--chevron.svg');
       }
     }
   }

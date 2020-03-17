@@ -5,3 +5,4 @@ require('popper.js');
 require('bootstrap');
 
 require('./components/nav');
+require('./components/range');

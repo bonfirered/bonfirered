@@ -14,16 +14,19 @@
       <div class="section__content-subtitle">Primary Font</div>
       <div class="typography">
         <div class="typography__title title">Alternate Gothic #2</div>
-        <div class="typography__slider">
-          <input type="range" min="8" max="72" value="32">
+        <div class="typography__options">
+          <div class="typography__slider">
+            <span class="typography__size"><span data-typography-value>32</span>px</span>
+            <input type="range" min="0" max="100" value="32" data-typography-range>
+          </div>
+          <div class="typography__style">
+            <select data-typography-style>
+              <option value="regular">Regular</option>
+              <option value="italic">Italic</option>
+            </select>
+          </div>
         </div>
-        <!-- <div class="typography__style">
-          <select>
-            <option value="regular">Regular</option>
-            <option value="italic">Italic</option>
-          </select>
-        </div> -->
-        <textarea class="typography__text">The quick brown fox jumps over the lazy dog</textarea>
+        <textarea class="typography__text" data-typography-textarea>The quick brown fox jumps over the lazy dog</textarea>
         <p>Alternate Gothic #2 is used for headlines and things we want to say loudly. Slap a cap on that, and let's roll.</p>
       </div>
     </div>
