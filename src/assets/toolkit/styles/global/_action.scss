@@ -1,0 +1,11 @@
+.action {
+  &__download {
+    display: inline-block;
+    margin-top: 15px;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

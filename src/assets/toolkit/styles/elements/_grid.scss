@@ -5,36 +5,6 @@
   flex-wrap: wrap;
   margin: 0 -15px;
 
-  &--alt {
-    p {
-      margin: 30px 0 10px;
-      padding-top: 15px;
-      border-top: 1px solid rgba($judge-grey, 0.6);
-    }
-  }
-
-  &--wide {
-    #{$this}__item {
-      &:nth-child(odd) {
-        @include make-col(4.5);
-      }
-      
-      &:nth-child(even) {
-        @include make-col(7.5);
-      }
-    }
-
-    #{$this}__img {
-      height: 295px !important;
-      margin-bottom: 30px;
-      background-color: transparent !important;
-
-      img {
-        max-height: 100%;
-      }
-    }
-  }
-
   &__item {
     @include make-col(6);
     margin-top: 40px;
@@ -77,6 +47,51 @@
       margin-bottom: 0;
       font-size: 12px;
       line-height: 20px;
+    }
+  }
+
+
+
+  &--alt {
+    p {
+      margin: 30px 0 10px;
+      padding-top: 15px;
+      border-top: 1px solid rgba($judge-grey, 0.6);
+    }
+  }
+
+  &--wide {
+    #{$this}__item {
+      &:nth-child(odd) {
+        @include make-col(4.5);
+      }
+      
+      &:nth-child(even) {
+        @include make-col(7.5);
+      }
+    }
+
+    #{$this}__img {
+      height: 295px;
+      margin-bottom: 30px;
+      background-color: transparent;
+    }
+  }
+
+  &--photo {
+    #{$this}__item {
+      @include make-col(12);
+    }
+
+    #{$this}__img {
+      display: flex;
+      justify-content: space-between;
+      height: 270px;
+      background-color: transparent;
+
+      img {
+        @include make-col(5.85);
+      }
     }
   }
 }
