@@ -13,6 +13,28 @@
     }
   }
 
+  &--wide {
+    #{$this}__item {
+      &:nth-child(odd) {
+        @include make-col(4.5);
+      }
+      
+      &:nth-child(even) {
+        @include make-col(7.5);
+      }
+    }
+
+    #{$this}__img {
+      height: 295px !important;
+      margin-bottom: 30px;
+      background-color: transparent !important;
+
+      img {
+        max-height: 100%;
+      }
+    }
+  }
+
   &__item {
     @include make-col(6);
     margin-top: 40px;
@@ -24,6 +46,10 @@
       justify-content: center;
       height: 240px;
       background-color: $dirty-white;
+
+      img {
+        max-width: 100%;
+      }
 
       &--alt {
         background-color: transparent;

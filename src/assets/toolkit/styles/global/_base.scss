@@ -19,3 +19,7 @@ body {
 section {
   min-height: $vh;
 }
+
+img {
+  object-fit: contain;
+}

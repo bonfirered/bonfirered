@@ -7,6 +7,16 @@
     font-size: 120px;
     letter-spacing: 2.4px;
     line-height: 100px;
+
+    &--secondary {
+      font-family: $serif;
+      text-transform: none;
+    }
+
+    &--tertiary {
+      font-family: $source-sans-serif;
+      text-transform: none;
+    }
   }
 
   &__text {
@@ -30,6 +40,16 @@
 
     &.italic {
       font-style: italic;
+    }
+
+    &--secondary {
+      font-family: $serif;
+      text-transform: none;
+    }
+
+    &--tertiary {
+      font-family: $source-sans-serif;
+      text-transform: none;
     }
   }
 
@@ -98,5 +118,29 @@
     border-top: 1px solid rgba($judge-grey, 0.6);
     font-size: 16px;
     line-height: 28px;
+    
+    a {
+      position: relative;
+      color: $bonfire-red;
+      text-decoration: none;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+        background-color: transparent;
+        transition: all 0.3s;
+      }
+
+      &:hover {
+        &:after {
+          background-color: $bonfire-red;
+        }
+      }
+    }
   }
 }

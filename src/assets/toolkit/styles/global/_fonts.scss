@@ -1,5 +1,7 @@
 // Fonts
 
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
 // AlternateGothic-No2
 @font-face {
   font-family: 'AlternateGothic-No2';
@@ -30,5 +32,6 @@
 }
 
 $sans-serif: 'AlternateGothic-No2', sans-serif;
+$source-sans-serif: 'Source Sans Pro', sans-serif;
 $serif: 'sanchez-regular';
 $serif-italic: 'sanchez-italic';
