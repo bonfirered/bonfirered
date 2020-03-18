@@ -112,4 +112,19 @@
       }
     }
   }
+
+  &--nav {
+    align-items: flex-end;
+
+    #{$this}__item {
+      @include make-col(4);
+
+      &:first-child,
+      &:nth-child(2) {
+        img {
+          width: 55px;
+        }
+      }
+    }
+  }
 }
