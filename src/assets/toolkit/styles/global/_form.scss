@@ -1,0 +1,105 @@
+.form {
+  $this: &;
+
+  &__item {
+    input[type='text'] {
+      width: 100%;
+      padding-bottom: 5px;
+      background: none;
+      border: none;
+      border-bottom: 1px solid rgba($judge-grey, 0.6);
+      color: $judge-grey;
+      font-family: $serif-italic;
+      font-size: 10px;
+      line-height: 18px;
+    }
+
+    label {
+      margin-right: 20px;
+      margin-bottom: 0;
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    input[type='radio'],
+    input[type='checkbox'] {
+      position: relative;
+      top: 2px;
+      width: 9px;
+      height: 13px;
+      margin-right: 5px;
+      background-image: url('/assets/toolkit/images/icon--nav-inactive.svg');
+      background-size: cover;
+      appearance: none;
+      transition: background-image 0.3s;
+    }
+
+    input[type='radio'] {
+      &:checked {
+        background-image: url('/assets/toolkit/images/icon--nav-active.svg');
+      }
+    }
+
+    input[type='checkbox'] {
+      &:checked {
+        background-image: url('/assets/toolkit/images/icon--checkbox-checked.svg');
+      }
+    }
+
+    textarea {
+      width: 100%;
+      height: 125px;
+      margin-top: 20px;
+      padding: 10px 15px;
+      background-color: rgba($judge-grey, 0.25);
+      border: none;
+      color: $judge-grey;
+      font-family: $serif-italic;
+      font-size: 10px;
+      line-height: 18px;
+      resize: none;
+    }
+
+    &#{$this}__select {
+      position: relative;
+      padding-right: 0;
+      
+      select {
+        width: 100%;
+        padding-bottom: 5px;
+        background: none;
+        border: none;
+        border-bottom: 1px solid rgba($judge-grey, 0.6);
+        border-radius: 0;
+        color: $judge-grey;
+        font-family: $serif-italic;
+        font-size: 10px;
+        line-height: 12px;
+        appearance: none;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 9px;
+        height: 5px;
+        background-image: url('/assets/toolkit/images/icon--chevron.svg');
+        transform: translateY(-50%);
+      }
+    }
+
+    p,
+    fieldset {
+      display: inline-block;
+    }
+
+    p {
+      width: 100px;
+      margin-bottom: 0;
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}

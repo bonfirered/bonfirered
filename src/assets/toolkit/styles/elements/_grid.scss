@@ -127,4 +127,12 @@
       }
     }
   }
+
+  &--form {
+    margin-bottom: 20px;
+
+    #{$this}__item {
+      @include make-col(4);
+    }
+  }
 }
