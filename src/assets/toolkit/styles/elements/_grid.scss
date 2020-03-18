@@ -41,6 +41,10 @@
       margin: 30px 0 10px;
       padding-top: 20px;
       border-top: 1px solid rgba($judge-grey, 0.6);
+
+      &--short {
+        margin: 18px 0 10px;
+      }
     }
 
     p {
@@ -75,6 +79,20 @@
       height: 295px;
       margin-bottom: 30px;
       background-color: transparent;
+    }
+  }
+
+  &--thin {
+    justify-content: space-between;
+
+    #{$this}__item {
+      &:nth-child(odd) {
+        @include make-col(5);
+      }
+      
+      &:nth-child(even) {
+        @include make-col(5);
+      }
     }
   }
 

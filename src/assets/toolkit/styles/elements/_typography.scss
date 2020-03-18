@@ -143,4 +143,20 @@
       }
     }
   }
+
+  &__font {
+    margin-bottom: -10px;
+    font-size: 40px;
+    letter-spacing: 0.8px;
+    line-height: 34px;
+
+    &--primary {
+      font-family: $sans-serif;
+      text-transform: uppercase;
+    }
+
+    &--secondary {
+      font-family: $serif;
+    }
+  }
 }

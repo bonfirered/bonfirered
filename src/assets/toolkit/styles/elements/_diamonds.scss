@@ -20,6 +20,11 @@
         top: 240px;
         left: 375px;
       }
+
+      .section__tone-of-voice & {
+        top: 240px;
+        left: 375px;
+      }
     }
 
     &--2 {
@@ -32,6 +37,12 @@
       }
 
       .section__brand-pillars & {
+        top: 413px;
+        left: 329px;
+        z-index: 1;
+      }
+
+      .section__tone-of-voice & {
         top: 413px;
         left: 329px;
         z-index: 1;
@@ -51,6 +62,11 @@
         top: 240px;
         left: 231px;
       }
+
+      .section__tone-of-voice & {
+        top: 240px;
+        left: 231px;
+      }
     }
 
     &--4 {
@@ -63,6 +79,11 @@
       }
 
       .section__brand-pillars & {
+        top: 180px;
+        left: 302px;
+      }
+
+      .section__tone-of-voice & {
         top: 180px;
         left: 302px;
       }
