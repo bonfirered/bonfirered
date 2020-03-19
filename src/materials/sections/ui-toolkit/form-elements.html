@@ -15,9 +15,6 @@
         <div class="grid__item form__item">
           <input type="text" value="Text input - 1">
         </div>
-        <div class="grid__item form__item">
-          <input type="text" value="Text input - 2">
-        </div>
         <div class="grid__item form__item form__select">
           <select>
             <option>Select</option>
@@ -25,6 +22,14 @@
             <option>Option - 2</option>
             <option>Option - 3</option>
           </select>
+        </div>
+        <div class="grid__item form__item typography__options">
+          <div class="typography__style">
+            <select data-typography-style>
+              <option value="regular">Regular</option>
+              <option value="italic">Italic</option>
+            </select>
+          </div>
         </div>
       </div>
       <div class="form__item">
@@ -64,6 +69,14 @@
             Selection - 3
           </label>
         </fieldset>
+      </div>
+      <div class="form__item">
+        <div class="typography__options">
+          <div class="typography__slider">
+            <span class="typography__size"><span data-typography-value>32</span>px</span>
+            <input type="range" min="0" max="100" value="32" data-typography-range>
+          </div>
+        </div>
       </div>
       <div class="form__item">
         <textarea>Textarea</textarea>

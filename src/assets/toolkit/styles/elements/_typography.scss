@@ -35,7 +35,7 @@
     resize: none;
 
     &.regular {
-      font-style: regular;
+      font-style: normal;
     }
 
     &.italic {
@@ -108,6 +108,7 @@
         width: 9px;
         height: 5px;
         background-image: url('/assets/toolkit/images/icon--chevron.svg');
+        transform: translateY(-50%);
       }
     }
   }
