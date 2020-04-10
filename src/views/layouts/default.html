@@ -12,7 +12,9 @@
     <!-- /toolkit styles -->
   </head>
   <body>
-    {% body %}
+    <div data-fullpage>
+      {% body %}
+    </div>
 
     <!-- toolkit scripts -->
     <script src="{{#if baseurl}}{{ baseurl }}/{{/if}}assets/toolkit/scripts/toolkit.js"></script>
