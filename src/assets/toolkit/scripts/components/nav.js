@@ -1,10 +1,22 @@
 import $ from 'jQuery';
+import TweenMax from 'TweenMax';
+import ScrollMagic from 'ScrollMagic';
 
 $(document).ready(() => {
   const $navItem = $('[data-nav-item]');
   const $navParent = $('[data-nav-parent]');
   const $navSub = $('[data-nav-sub]');
   const $navSubItem = $('[data-nav-sub] > li');
+
+  var controller = new ScrollMagic.Controller();
+
+  var navItem = new TweenMax.staggerTo($navItem, .2, { opacity: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: 3.4 }, 0.25);
+
+  new ScrollMagic.Scene({ triggerElement: $navItem.get(0) })
+    .addTo(controller)
+    .setTween(navItem)
+    .triggerHook(1)
+    .reverse(false);
 
   $navItem
   .mouseenter(function() {
