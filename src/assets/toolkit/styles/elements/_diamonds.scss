@@ -6,6 +6,7 @@
 
   &__item {
     position: absolute;
+    opacity: 0;
 
     &--1 {
       height: 118px;
@@ -16,9 +17,49 @@
         bottom: 80px;
       }
 
-      .section__brand-pillars & {
+      .section__brand-pillars-craft & {
         top: 240px;
         left: 375px;
+      }
+
+      .section__brand-pillars-together & {
+        top: 160px;
+        left: -26px;
+      }
+
+      .section__brand-pillars-play & {
+        top: 271px;
+        left: 378px;
+      }
+
+      .section__audience & {
+        top: 179px;
+        left: -35px;
+      }
+
+      .section__guiding-principles-core & {
+        top: 206px;
+        left: 101px;
+      }
+
+      .section__guiding-principles-kindling & {
+        top: 207px;
+        left: 463px;
+      }
+
+      .section__guiding-principles-flame & {
+        top: 139px;
+        left: -4px;
+      }
+
+      .section__guiding-principles-fuck & {
+        top: 214px;
+        left: 210px;
+      }
+
+      .section__name & {
+        top: 133px;
+        left: -40px;
       }
 
       .section__tone-of-voice & {
@@ -36,9 +77,61 @@
         bottom: 190px;
       }
 
-      .section__brand-pillars & {
+      .section__brand-pillars-craft & {
         top: 413px;
         left: 329px;
+        z-index: 1;
+      }
+
+      .section__brand-pillars-together & {
+        top: 330px;
+        left: 188px;
+        z-index: 1;
+      }
+
+      .section__brand-pillars-play & {
+        top: 234px;
+        left: 290px;
+        z-index: 1;
+      }
+
+      .section__brand-pillars-personality & {
+        top: 372px;
+        left: -13px;
+      }
+
+      .section__audience & {
+        top: 141px;
+        left: 106px;
+        z-index: 1;
+      }
+
+      .section__guiding-principles-core & {
+        top: 392px;
+        left: 46px;
+        z-index: 1;
+      }
+
+      .section__guiding-principles-kindling & {
+        top: 131px;
+        left: 347px;
+        z-index: 1;
+      }
+
+      .section__guiding-principles-flame & {
+        top: 321px;
+        left: 142px;
+        z-index: 1;
+      }
+
+      .section__guiding-principles-fuck & {
+        top: 174px;
+        left: 290px;
+      }
+
+      .section__name & {
+        top: 147px;
+        left: 66px;
         z-index: 1;
       }
 
@@ -46,6 +139,14 @@
         top: 413px;
         left: 329px;
         z-index: 1;
+      }
+
+      &-2 {
+        .section__brand-pillars-personality & {
+          top: 243px;
+          left: 464px;
+          z-index: 1;
+        }
       }
     }
 
@@ -58,14 +159,74 @@
         bottom: -4px;
       }
 
-      .section__brand-pillars & {
+      .section__brand-pillars-craft & {
         top: 240px;
         left: 231px;
+      }
+
+      .section__brand-pillars-together & {
+        top: 152px;
+        left: 143px;
+      }
+
+      .section__brand-pillars-play & {
+        top: 217px;
+        left: 354px;
+      }
+
+      .section__brand-pillars-personality & {
+        top: 375px;
+        left: 159px;
+        z-index: 1;
+      }
+
+      .section__audience & {
+        top: 297px;
+        left: 82px;
+      }
+
+      .section__guiding-principles-core & {
+        top: 369px;
+        left: 145px;
+      }
+
+      .section__guiding-principles-kindling & {
+        top: 280px;
+        left: -11px;
+        z-index: 1;
+      }
+
+      .section__guiding-principles-flame & {
+        top: 110px;
+        left: 62px;
+      }
+
+      .section__guiding-principles-fuck & {
+        top: 318px;
+        left: 321px;
+        z-index: 1;
+      }
+
+      .section__name & {
+        top: 246px;
+        left: 34px;
       }
 
       .section__tone-of-voice & {
         top: 240px;
         left: 231px;
+      }
+
+      &-2 {
+        .section__guiding-principles-kindling & {
+          top: 342px;
+          left: 409px;
+        }
+
+        .section__name & {
+          top: 242px;
+          left: 350px;
+        }
       }
     }
 
@@ -78,14 +239,71 @@
         bottom: 262px;
       }
 
-      .section__brand-pillars & {
+      .section__brand-pillars-craft & {
         top: 180px;
         left: 302px;
+      }
+
+      .section__brand-pillars-together & {
+        top: 129px;
+        left: 42px;
+      }
+
+      .section__brand-pillars-play & {
+        top: 135px;
+        left: 435px;
+      }
+
+      .section__brand-pillars-personality & {
+        top: 468px;
+        left: 48px;
+        z-index: 1;    
+      }
+
+      .section__audience & {
+        top: 128px;
+        left: 92px;
+      }
+
+      .section__guiding-principles-core & {
+        top: 216px;
+        left: 232px;
+      }
+
+      .section__guiding-principles-kindling & {
+        top: 186px;
+        left: 547px;
+      }
+
+      .section__guiding-principles-flame & {
+        top: 280px;
+        left: 167px;
+      }
+
+      .section__guiding-principles-fuck & {
+        top: 140px;
+        left: 284px;
       }
 
       .section__tone-of-voice & {
         top: 180px;
         left: 302px;
+      }
+
+      &-2 {
+        .section__brand-pillars-personality & {
+          top: 267px;
+          left: 74px;
+          z-index: 1;
+        }
+      }
+
+      &-3 {
+        .section__brand-pillars-personality & {
+          top: 230px;
+          left: 459px;
+          z-index: 1;
+        }
       }
     }
 
@@ -96,6 +314,33 @@
       .section__landing & {
         left: 0;
         bottom: 295px;
+      }
+
+      .section__brand-pillars-personality & {
+        top: 161px;
+        left: 547px;
+      }
+
+      .section__name & {
+        top: 222px;
+        left: 346px;
+      }
+
+      &-2 {
+        .section__name & {
+          top: 102px;
+          left: 24px;
+        }
+      }
+    }
+
+    &--6 {
+      height: 200px;
+      width: 112px;
+
+      .section__brand-pillars-personality & {
+        top: 388px;
+        left: 308px;
       }
     }
   }
