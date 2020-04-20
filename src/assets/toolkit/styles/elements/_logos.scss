@@ -10,6 +10,7 @@
     @include make-col(5.75);
     padding: 119px 78px;
     text-align: center;
+    transform: scale(0);
 
     &--dark {
       background-color: $dirty-white;

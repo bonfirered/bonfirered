@@ -4,10 +4,11 @@ import TimelineMax from 'TimelineMax';
 import ScrollMagic from 'ScrollMagic';
 
 $(document).ready(() => {
-  const $section = $('[data-anchor="brandPillarsCraft"]');
+  const $section = $('[data-anchor="color"]');
   const $subtitle = $section.find('[data-subtitle]');
-  const $copy = $section.find('[data-copy]');
-  const $diamond = $section.find('[data-diamond]');
+  const $color = $section.find('[data-color]');
+  const $colorCircle = $section.find('[data-color-circle]');
+  const $hierarchy = $section.find('[data-hierarchy]');
 
   var controller = new ScrollMagic.Controller();
 
@@ -20,31 +21,30 @@ $(document).ready(() => {
     .triggerHook(.95)
     .reverse(false);
 
-  // title
-  var mySplitText = new SplitText($('#brandPillarsCraftTitle'), { type: 'words, chars' });
-  var title = new TimelineMax().staggerFrom(mySplitText.words, 0.4, { opacity: 0, ease: Linear.easeIn, delay: .75 }, 0.25);
+  // color
+  var color = new TweenMax.staggerTo($color, .2, { opacity: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: .75 }, 0.25);
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
-    .setTween(title)
+    .setTween(color)
     .triggerHook(.95)
     .reverse(false);
 
-  // diamonds
-  var diamond = new TweenMax.staggerTo($diamond, .2, { opacity: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: 1.75 }, 0.25);
+  // color circle
+  var colorCircle = new TweenMax.staggerTo($colorCircle, .2, { scale: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: .75 }, 0.25);
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
-    .setTween(diamond)
+    .setTween(colorCircle)
     .triggerHook(.95)
     .reverse(false);
-
-  // copy
-  var copy = new TimelineMax().fromTo($copy, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: 2.75 });
+  
+  // hierarchy
+  var hierarchy = new TimelineMax().fromTo($hierarchy, .2, { width: '0' }, { width: '100%', ease: Linear.easeIn, delay: .5 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
-    .setTween(copy)
+    .setTween(hierarchy)
     .triggerHook(.95)
     .reverse(false);
 });

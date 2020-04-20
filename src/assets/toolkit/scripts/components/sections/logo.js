@@ -4,10 +4,11 @@ import TimelineMax from 'TimelineMax';
 import ScrollMagic from 'ScrollMagic';
 
 $(document).ready(() => {
-  const $section = $('[data-anchor="brandPillarsCraft"]');
+  const $section = $('[data-anchor="logo"]');
   const $subtitle = $section.find('[data-subtitle]');
+  const $logo = $section.find('[data-logo]');
   const $copy = $section.find('[data-copy]');
-  const $diamond = $section.find('[data-diamond]');
+  const $listItem = $section.find('[data-list-item]');
 
   var controller = new ScrollMagic.Controller();
 
@@ -20,31 +21,30 @@ $(document).ready(() => {
     .triggerHook(.95)
     .reverse(false);
 
-  // title
-  var mySplitText = new SplitText($('#brandPillarsCraftTitle'), { type: 'words, chars' });
-  var title = new TimelineMax().staggerFrom(mySplitText.words, 0.4, { opacity: 0, ease: Linear.easeIn, delay: .75 }, 0.25);
+  // logos
+  var logo = new TweenMax.staggerTo($logo, .3, { scale: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: .75 }, 0.25);
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
-    .setTween(title)
-    .triggerHook(.95)
-    .reverse(false);
-
-  // diamonds
-  var diamond = new TweenMax.staggerTo($diamond, .2, { opacity: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: 1.75 }, 0.25);
-
-  new ScrollMagic.Scene({ triggerElement: $section.get(0) })
-    .addTo(controller)
-    .setTween(diamond)
+    .setTween(logo)
     .triggerHook(.95)
     .reverse(false);
 
   // copy
-  var copy = new TimelineMax().fromTo($copy, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: 2.75 });
+  var copy = new TimelineMax().fromTo($copy, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: 1.5 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
     .setTween(copy)
+    .triggerHook(.95)
+    .reverse(false);
+
+  // list items
+  var listItem = new TweenMax.staggerTo($listItem, .2, { opacity: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: 1.8 }, 0.25);
+
+  new ScrollMagic.Scene({ triggerElement: $section.get(0) })
+    .addTo(controller)
+    .setTween(listItem)
     .triggerHook(.95)
     .reverse(false);
 });

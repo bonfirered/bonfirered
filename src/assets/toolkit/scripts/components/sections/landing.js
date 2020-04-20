@@ -2,26 +2,32 @@ import $ from 'jQuery';
 import TweenMax from 'TweenMax';
 import TweenLite from 'TweenLite';
 import ScrollMagic from 'ScrollMagic';
+import { TimelineMax } from 'gsap';
 
-const $line = $('[data-line]');
-const $title = $('[data-title-shuffle]');
+$(document).ready(() => {
+  const $section = $('[data-anchor="landing"]');
+  const $line = $('[data-line]');
+  const $title = $('[data-title-shuffle]');
 
-var controller = new ScrollMagic.Controller();
+  var controller = new ScrollMagic.Controller();
 
-var line = new TweenMax.staggerTo($line, .3, { height: '100%', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: 3 }, 0.25);
+  // lines
+  var line = new TweenMax.staggerTo($line, .3, { height: '100%', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: 3 }, 0.25);
 
-new ScrollMagic.Scene({ triggerElement: $line.get(0) })
-  .addTo(controller)
-  .setTween(line)
-  .triggerHook(1)
-  .reverse(false);
+  new ScrollMagic.Scene({ triggerElement: $section.get(0) })
+    .addTo(controller)
+    .setTween(line)
+    .triggerHook(1)
+    .reverse(false);
 
-var mySplitText = new SplitText('[data-title-shuffle]', { type: 'words, chars'} );
+  // title
+  var mySplitText = new SplitText('[data-title-shuffle]', { type: 'words, chars' });
+  TweenLite.set('[data-title-shuffle]', { perspective: 400 });
+  var title = new TimelineMax().staggerFrom(mySplitText.words, 0.4, { opacity: 0, ease: Linear.easeIn }, 0.25);
 
-TweenLite.set('[data-title-shuffle]', { perspective: 400 });
-
-TweenMax.staggerFrom(mySplitText.words, 0.4, { opacity: 0, ease: Linear.easeIn }, 0.25, allDone);
-
-function allDone() {
-  mySplitText.revert();
-}
+  new ScrollMagic.Scene({ triggerElement: $section.get(0) })
+    .addTo(controller)
+    .setTween(title)
+    .triggerHook(.95)
+    .reverse(false);
+});
