@@ -101,6 +101,18 @@
         background-color: $bonfire-red;
       }
 
+      &.logo {
+        &:before {
+          height: 80%;
+        }
+      }
+
+      &.graphics {
+        &:before {
+          height: 50%;
+        }
+      }
+
       li {
         padding-bottom: 5px;
 

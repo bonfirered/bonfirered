@@ -8,6 +8,7 @@
     font-family: $serif;
     font-size: 12px;
     line-height: 20px;
+    opacity: 0;
 
     th {
       padding: 10px 0;
@@ -23,10 +24,12 @@
 
   tbody {
     tr {
+      border-bottom: 1px solid rgba($judge-grey, 0.6);
+      opacity: 0;
+      
       td {
         padding: 28px 0;
         border-top: none;
-        border-bottom: 1px solid rgba($judge-grey, 0.6);
         color: $judge-grey;
         text-align: center;
         font-family: $serif;
