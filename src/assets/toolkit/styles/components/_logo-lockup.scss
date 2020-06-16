@@ -4,12 +4,14 @@
   left: 65px;
 
   &--vert {
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
+    z-index: 9999;
     width: 80px;
     border-right: 1px solid rgba($judge-grey, 0.6);
+    transition: opacity 0.5s;
 
     img {
       position: relative;
@@ -28,6 +30,10 @@
       bottom: 90px;
       width: 10px;
       transform: translateX(-50%);
+    }
+
+    .fp-viewing-landing & {
+      opacity: 0;
     }
   }
 }
