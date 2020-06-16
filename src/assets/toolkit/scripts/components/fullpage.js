@@ -79,7 +79,6 @@ $(document).ready(() => {
       $sectionTitle.each(function (index) {
         if ($(this).hasClass('active')) {
           var title = $(this).attr('data-section-title');
-          var parentNav = $(this).attr('data-section-nav-parent');
           var parentSection = $(this).attr('data-section-parent');
 
           $sectionNavTitle.text(title);
