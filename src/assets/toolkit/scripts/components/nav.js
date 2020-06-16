@@ -7,6 +7,7 @@ $(document).ready(() => {
   const $navParent = $('[data-nav-parent]');
   const $navSub = $('[data-nav-sub]');
   const $navSubItem = $('[data-nav-sub] > li');
+  const $navSubSection = $('[data-nav-sub-section]');
 
   var controller = new ScrollMagic.Controller();
 

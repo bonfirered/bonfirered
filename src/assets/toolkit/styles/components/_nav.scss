@@ -89,7 +89,10 @@
     &--inner {
       position: relative;
       top: 20px;
+      display: none;
       list-style-type: none;
+      opacity: 0;
+      transition: opacity .5s;
 
       &:before {
         content: '';
@@ -99,6 +102,11 @@
         height: 69%;
         width: 1px;
         background-color: $bonfire-red;
+      }
+
+      &.active {
+        display: block;
+        opacity: 1;
       }
 
       &.logo {
