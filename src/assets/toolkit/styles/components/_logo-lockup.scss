@@ -8,7 +8,7 @@
     top: 0;
     bottom: 0;
     left: 0;
-    z-index: 9999;
+    z-index: -9999;
     width: 80px;
     border-right: 1px solid rgba($judge-grey, 0.6);
     transition: opacity 0.5s;
@@ -32,7 +32,8 @@
       transform: translateX(-50%);
     }
 
-    .fp-viewing-landing & {
+    :not(.fp-viewing-landing) & {
+      z-index: -9999;
       opacity: 0;
     }
   }

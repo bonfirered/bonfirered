@@ -80,7 +80,7 @@ $(document).ready(() => {
         if ($(this).hasClass('active')) {
           var title = $(this).attr('data-section-title');
           var parentSection = $(this).attr('data-section-parent');
-
+          
           $sectionNavTitle.text(title);
           $('[data-section-nav-parent]').removeClass('active');
           $('[data-section-nav-parent="' + parentSection + '"]').addClass('active');
