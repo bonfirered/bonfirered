@@ -6,6 +6,7 @@
   &__item {
     margin-bottom: 40px;
     padding: 0 15px;
+    opacity: 0;
 
     #{$this}__img {
       background-color: $dirty-white;

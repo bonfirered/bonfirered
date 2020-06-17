@@ -13,7 +13,7 @@ $(document).ready(() => {
   var controller = new ScrollMagic.Controller();
 
   // subtitle
-  var subtitle = new TimelineMax().fromTo($subtitle, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: .5 });
+  var subtitle = new TimelineMax().fromTo($subtitle, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: .15 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
@@ -22,7 +22,7 @@ $(document).ready(() => {
     .reverse(false);
 
   // logos
-  var logo = new TweenMax.staggerTo($logo, .3, { scale: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: .75 }, 0.25);
+  var logo = new TweenMax.staggerTo($logo, .2, { scale: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: .25 }, 0.15);
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
@@ -31,7 +31,7 @@ $(document).ready(() => {
     .reverse(false);
 
   // copy
-  var copy = new TimelineMax().fromTo($copy, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: 1.5 });
+  var copy = new TimelineMax().fromTo($copy, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: .6 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
@@ -40,7 +40,7 @@ $(document).ready(() => {
     .reverse(false);
 
   // list items
-  var listItem = new TweenMax.staggerTo($listItem, .2, { opacity: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: 1.8 }, 0.25);
+  var listItem = new TweenMax.staggerTo($listItem, .2, { opacity: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: .8 }, 0.2);
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)

@@ -11,7 +11,7 @@ $(document).ready(() => {
 
   var controller = new ScrollMagic.Controller();
 
-  var navItem = new TweenMax.staggerTo($navItem, .2, { opacity: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: 3.4 }, 0.25);
+  var navItem = new TweenMax.staggerTo($navItem, .2, { opacity: '1', y: '0', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: 1.6 }, 0.25);
 
   new ScrollMagic.Scene({ triggerElement: $navItem.get(0) })
     .addTo(controller)
@@ -41,7 +41,7 @@ $(document).ready(() => {
         .triggerHook(1)
         .reverse(false);
 
-      var navSubItem = new TweenMax.staggerTo($item, .3, { opacity: '1', y: '0', ease: Circ.easeOut }, -.15);
+      var navSubItem = new TweenMax.staggerTo($item, .3, { opacity: '1', y: '0', ease: Circ.easeOut }, -.06);
 
       new ScrollMagic.Scene({ triggerElement: $item.get(0) })
         .addTo(controller)

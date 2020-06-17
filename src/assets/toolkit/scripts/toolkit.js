@@ -33,6 +33,7 @@ require('./components/sections/logoSymbol');
 require('./components/sections/logoType');
 require('./components/sections/logoLockups');
 require('./components/sections/logoUsage');
+require('./components/sections/logoCobranded');
 require('./components/sections/color');
 require('./components/sections/graphicSupporting');
 require('./components/sections/graphicIllustrations');
