@@ -11,7 +11,7 @@ $(document).ready(() => {
   var controller = new ScrollMagic.Controller();
 
   // subtitle
-  var subtitle = new TimelineMax().fromTo($subtitle, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: .5 });
+  var subtitle = new TimelineMax().fromTo($subtitle, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: .15 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
@@ -20,7 +20,7 @@ $(document).ready(() => {
     .reverse(false);
 
   // cards
-  var card = new TweenMax.staggerTo($card, .2, { opacity: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: .75 }, 0.25);
+  var card = new TweenMax.staggerTo($card, .2, { opacity: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: .25 }, 0.2);
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)

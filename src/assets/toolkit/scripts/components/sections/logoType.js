@@ -12,7 +12,7 @@ $(document).ready(() => {
   var controller = new ScrollMagic.Controller();
 
   // subtitle
-  var subtitle = new TimelineMax().fromTo($subtitle, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: .5 });
+  var subtitle = new TimelineMax().fromTo($subtitle, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: .1 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
@@ -21,7 +21,7 @@ $(document).ready(() => {
     .reverse(false);
 
   // symbol
-  var symbol = new TimelineMax().fromTo($symbol, .3, { scale: '0' }, { scale: '1', ease: Linear.easeIn, delay: .75 });
+  var symbol = new TimelineMax().fromTo($symbol, .2, { scale: '0' }, { scale: '1', ease: Linear.easeIn, delay: .25 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
@@ -30,7 +30,7 @@ $(document).ready(() => {
     .reverse(false);
 
   // cards
-  var card = new TweenMax.staggerTo($card, .2, { opacity: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: 1.2 }, 0.25);
+  var card = new TweenMax.staggerTo($card, .2, { opacity: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: .5 }, 0.15);
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
