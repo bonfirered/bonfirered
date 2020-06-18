@@ -8,7 +8,7 @@
   padding: 60px 65px;
 
   &__nav {
-    @include make-col(3);
+    @include make-col(2.5);
     position: fixed;
     top: 0;
     bottom: 0;
