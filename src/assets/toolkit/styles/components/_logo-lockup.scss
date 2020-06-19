@@ -31,10 +31,10 @@
       width: 10px;
       transform: translateX(-50%);
     }
-
-    :not(.fp-viewing-landing) & {
-      z-index: -9999;
-      opacity: 0;
-    }
   }
+}
+
+:not(.fp-viewing-landing .logo-lockup--vert) {
+  z-index: 9999;
+  opacity: 1;
 }

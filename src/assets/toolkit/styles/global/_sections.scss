@@ -77,28 +77,10 @@
     top: 0;
     bottom: 0;
     width: 1px;
-    height: 0;
+    height: 100%;
     background-color: rgba($judge-grey, 0.6);
-
-    &:first-child {
-      left: 80px;
-    }
-
-    &:nth-child(2) {
-      right: 800px;
-    }
-
-    &:nth-child(3) {
-      right: 600px;
-    }
-
-    &:nth-child(4) {
-      right: 400px;
-    }
-
-    &:last-child {
-      right: 200px;
-    }
+    transform: translateX(0);
+    transition: transform .5s;
   }
 
   &__inner {
