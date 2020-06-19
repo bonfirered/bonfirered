@@ -18,18 +18,17 @@
     }
 
     .logo {
-      top: 107px;
-      left: -27px;
-      width: 134px;
-      transform: rotate(-90deg);
+      top: 70px;
+      left: 25px;
+      height: 47px;
+      width: 30px;
     }
 
     .diamond {
-      top: calc(100% - 148px);
-      left: 50%;
+      top: calc(100% - 122px);
+      left: 0;
       bottom: 90px;
       width: 10px;
-      transform: translateX(-50%);
     }
   }
 }

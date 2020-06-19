@@ -10,12 +10,12 @@
   &__nav {
     @include make-col(2.5);
     position: fixed;
-    top: 0;
+    top: 5px;
     bottom: 0;
     left: 110px;
     z-index: 9999;
     opacity: 0;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     padding: 60px 0 88px;
@@ -25,11 +25,17 @@
       margin-top: 35px;
     }
 
+    &-subtitle {
+      transform: rotate(90deg) translateY(-93%);
+      transform-origin: top left;
+    }
+
     .fp-viewing-landing & {
       display: none;
     }
 
     &.active {
+      display: flex;
       opacity: 1;
     }
   }
