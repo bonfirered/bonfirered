@@ -4,6 +4,11 @@
   left: 0;
   z-index: -1;
 
+  .section__landing & {
+    width: 400px;
+    height: 400px;
+  }
+
   &__item {
     position: absolute;
     opacity: 0;
