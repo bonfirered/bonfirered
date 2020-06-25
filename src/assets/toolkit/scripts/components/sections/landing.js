@@ -16,7 +16,7 @@ $(document).ready(() => {
   var controller = new ScrollMagic.Controller();
 
   // lines
-  var lineOne = new TimelineMax().fromTo($lineOne, .2, { opacity: '0', left: 0 }, { opacity: '1', left: '4%', ease: Linear.easeIn, delay: .25 });
+  var lineOne = new TimelineMax().fromTo($lineOne, .2, { opacity: '0', left: 0 }, { opacity: '1', left: '80px', ease: Linear.easeIn, delay: .25 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)

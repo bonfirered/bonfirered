@@ -1,6 +1,8 @@
 import $ from 'jQuery';
 import TweenMax from 'TweenMax';
+import TweenLite from 'TweenLite';
 import ScrollMagic from 'ScrollMagic';
+import TimelineMax from 'TimelineMax';
 
 $(document).ready(() => {
   const $navItem = $('[data-nav-item]');
@@ -8,6 +10,13 @@ $(document).ready(() => {
   const $navSub = $('[data-nav-sub]');
   const $navSubItem = $('[data-nav-sub] > li');
   const $navSubSection = $('[data-nav-sub-section]');
+  const $navOpen = $('[data-open-nav]');
+  const $navClose = $('[data-close-nav]');
+  const $navOverlay = $('[data-nav-overlay]');
+  const $lineOne = $('[data-nav-line-one]');
+  const $lineTwo = $('[data-nav-line-two]');
+  const $lineThree = $('[data-nav-line-three]');
+  const $lineFour = $('[data-nav-line-four]');
 
   var controller = new ScrollMagic.Controller();
 
@@ -77,4 +86,45 @@ $(document).ready(() => {
       }
     });
   }, false);
+
+  $navOpen.on('click', function () {
+    $navOverlay.addClass('active');
+  });
+
+  $navClose.on('click', function () {
+    $navOverlay.removeClass('active');
+  });
+
+  // lines
+  var lineOne = new TimelineMax().fromTo($lineOne, .3, { opacity: '0', left: 0 }, { opacity: '1', left: '170px', ease: Linear.easeIn, delay: 2 });
+
+  new ScrollMagic.Scene({ triggerElement: $lineOne.get(0) })
+    .addTo(controller)
+    .setTween(lineOne)
+    .triggerHook(1)
+    .reverse(false);
+
+  var lineTwo = new TimelineMax().fromTo($lineTwo, .3, { opacity: '0', left: 0 }, { opacity: '1', left: '375px', ease: Linear.easeIn, delay: 2.4 });
+
+  new ScrollMagic.Scene({ triggerElement: $lineTwo.get(0) })
+    .addTo(controller)
+    .setTween(lineTwo)
+    .triggerHook(1)
+    .reverse(false);
+
+  var lineThree = new TimelineMax().fromTo($lineThree, .3, { opacity: '0', left: 0 }, { opacity: '1', left: '570px', ease: Linear.easeIn, delay: 2.8 });
+
+  new ScrollMagic.Scene({ triggerElement: $lineThree.get(0) })
+    .addTo(controller)
+    .setTween(lineThree)
+    .triggerHook(1)
+    .reverse(false);
+  
+  var lineFour = new TimelineMax().fromTo($lineFour, .3, { opacity: '0', left: 0 }, { opacity: '1', left: '770px', ease: Linear.easeIn, delay: 3.2 });
+
+  new ScrollMagic.Scene({ triggerElement: $lineFour.get(0) })
+    .addTo(controller)
+    .setTween(lineFour)
+    .triggerHook(1)
+    .reverse(false);
 });
