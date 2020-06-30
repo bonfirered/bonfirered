@@ -5,8 +5,8 @@ import '../../../../../node_modules/fullpage.js/vendors/scrollOverflow.min';
 $(document).ready(() => {
   const $navSubSection = $('[data-nav-sub-section]');
   const $navSubSectionItem = $('[data-nav-sub-section] > li');
-  const $sectionNavParent = $('[data-section-nav-parent]');
   const $sectionNavTitle = $('[data-section-nav-title]');
+  const $sectionNavBlock = $('[data-section-nav-block]');
   const $sectionTitle = $('[data-section-title]');
 
   new fullpage(`[data-fullpage]`, {
@@ -82,6 +82,12 @@ $(document).ready(() => {
           var parentSection = $(this).attr('data-section-parent');
           
           $sectionNavTitle.text(title);
+
+          setTimeout(function () {
+            $sectionNavTitle.css('transform', 'translateX(20px)');
+            $sectionNavBlock.css('transform', 'translateX(100%)');
+          }, 100);
+
           $('[data-section-nav-parent]').removeClass('active');
           $('[data-section-nav-parent="' + parentSection + '"]').addClass('active');
         }
