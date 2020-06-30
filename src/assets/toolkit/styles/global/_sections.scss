@@ -18,7 +18,7 @@
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    padding: 60px 0 88px;
+    padding: 60px 0 83px;
     transition: opacity .5s;
 
     &-title {
@@ -32,6 +32,10 @@
           opacity: 1;
           transform: translateX(0);
         }
+      }
+
+      &:focus {
+        outline: none;
       }
 
       &:after {
