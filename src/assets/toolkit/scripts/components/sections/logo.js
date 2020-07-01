@@ -22,12 +22,12 @@ $(document).ready(() => {
     .reverse(false);
 
   // logos
-  var logo = new TweenMax.staggerTo($logo, .2, { scale: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: .25 }, 0.15);
+  var logo = new TweenMax.staggerTo($logo, .1, { opacity: '1', scale: '1', y: '0', autoAlpha: 1, yoyo: true, ease: Linear.easeIn }, 0.05);
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
     .setTween(logo)
-    .triggerHook(.95)
+    .triggerHook(.98)
     .reverse(false);
 
   // copy

@@ -10,7 +10,9 @@
     @include make-col(5.75);
     padding: 119px 78px;
     text-align: center;
-    transform: scale(0);
+    transform: translateY(80px) scale(1.1);
+    transition: all .5s;
+    opacity: 0;
 
     &--dark {
       background-color: $dirty-white;
