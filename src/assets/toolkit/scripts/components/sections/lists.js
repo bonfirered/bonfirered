@@ -12,7 +12,7 @@ $(document).ready(() => {
   var controller = new ScrollMagic.Controller();
 
   // ordered subtitle
-  var subtitleO = new TimelineMax().fromTo($subtitleO, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: .5 });
+  var subtitleO = new TimelineMax().fromTo($subtitleO, .2, { opacity: '0', y: '20' }, { opacity: '1', y: '0', ease: Linear.easeIn, delay: .15 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
@@ -30,7 +30,7 @@ $(document).ready(() => {
     .reverse(false);
 
   // unordered subtitle
-  var subtitleU = new TimelineMax().fromTo($subtitleU, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: 1.5 });
+  var subtitleU = new TimelineMax().fromTo($subtitleU, .2, { opacity: '0', y: '20' }, { opacity: '1', y: '0', ease: Linear.easeIn, delay: 1.25 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)

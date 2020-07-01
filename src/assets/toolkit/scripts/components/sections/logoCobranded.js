@@ -11,8 +11,8 @@ $(document).ready(() => {
   var controller = new ScrollMagic.Controller();
 
   // subtitle
-  var subtitle = new TimelineMax().fromTo($subtitle, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: .15 });
-
+  var subtitle = new TimelineMax().fromTo($subtitle, .2, { opacity: '0', y: '20' }, { opacity: '1', y: '0', ease: Linear.easeIn, delay: .15 });
+  
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
     .setTween(subtitle)
