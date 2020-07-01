@@ -47,3 +47,4 @@ require('./components/sections/buttons');
 require('./components/sections/cursor');
 require('./components/sections/navigationBar');
 require('./components/sections/lists');
+require('./components/sections/formElements');

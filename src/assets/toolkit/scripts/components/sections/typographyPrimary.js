@@ -13,8 +13,8 @@ $(document).ready(() => {
   var controller = new ScrollMagic.Controller();
 
   // subtitle
-  var subtitle = new TimelineMax().fromTo($subtitle, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: .5 });
-
+  var subtitle = new TimelineMax().fromTo($subtitle, .2, { opacity: '0', y: '20' }, { opacity: '1', y: '0', ease: Linear.easeIn, delay: .15 });
+  
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
     .setTween(subtitle)
@@ -31,7 +31,7 @@ $(document).ready(() => {
     .triggerHook(.95)
     .reverse(false);
 
-  var options = new TimelineMax().fromTo($options, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: 1.75 });
+  var options = new TimelineMax().fromTo($options, .2, { opacity: '0', y: '20' }, { opacity: '1', y: '0', ease: Linear.easeIn, delay: 1 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
@@ -39,7 +39,7 @@ $(document).ready(() => {
     .triggerHook(.95)
     .reverse(false);
     
-  var textarea = new TimelineMax().fromTo($textarea, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: 2 });
+  var textarea = new TimelineMax().fromTo($textarea, .2, { opacity: '0', y: '20' }, { opacity: '1', y: '0', ease: Linear.easeIn, delay: 1 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
@@ -47,7 +47,7 @@ $(document).ready(() => {
     .triggerHook(.95)
     .reverse(false);
 
-  var copy = new TimelineMax().fromTo($copy, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: 2.25 });
+  var copy = new TimelineMax().fromTo($copy, .2, { opacity: '0', y: '20' }, { opacity: '1', y: '0', ease: Linear.easeIn, delay: 1 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
