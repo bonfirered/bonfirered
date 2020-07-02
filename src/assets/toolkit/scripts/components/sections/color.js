@@ -31,7 +31,7 @@ $(document).ready(() => {
     .reverse(false);
 
   // color circle
-  var colorCircle = new TweenMax.staggerTo($colorCircle, .2, { scale: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: .35 }, 0.1);
+  var colorCircle = new TweenMax.staggerFromTo($colorCircle, .2, { scale: '1.15', y: '30', opacity: '0' }, { scale: '1', y:'0', opacity: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: .35 }, 0.1);
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)

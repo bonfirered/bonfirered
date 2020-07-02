@@ -20,7 +20,7 @@ $(document).ready(() => {
     .reverse(false);
 
   // image
-  var image = new TimelineMax().fromTo($image, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: .35 });
+  var image = new TimelineMax().fromTo($image, .2, { scale: '1.05', y: '30', opacity: '0' }, { scale: '1', y:'0', opacity: '1', ease: Linear.easeIn, delay: .35 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
