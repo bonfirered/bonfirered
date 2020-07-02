@@ -20,7 +20,7 @@ $(document).ready(() => {
     .reverse(false);
 
   // cards
-  var card = new TweenMax.staggerTo($card, .2, { opacity: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: .35 }, 0.1);
+  var card = new TweenMax.staggerFromTo($card, .2, { scale: '1.02', y: '30', opacity: '0' }, { scale: '1', y:'0', opacity: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: .35 }, 0.1);
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
