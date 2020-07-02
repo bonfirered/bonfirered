@@ -4,7 +4,7 @@ import TimelineMax from 'TimelineMax';
 import ScrollMagic from 'ScrollMagic';
 
 $(document).ready(() => {
-  const $section = $('[data-anchor="typography"]');
+  const $section = $('[data-anchor="formElements"]');
   const $card = $section.find('[data-card]');
 
   var controller = new ScrollMagic.Controller();

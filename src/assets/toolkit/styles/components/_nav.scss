@@ -21,7 +21,7 @@
       line-height: 18px;
       text-transform: uppercase;
       opacity: 0;
-      transform: translateY(-10px);
+      transform: translateY(10px);
 
       > a {
         color: $white;
@@ -97,6 +97,7 @@
       margin: 20px 0;
       list-style-type: none;
       opacity: 0;
+      height: 0;
       transition: opacity .5s;
 
       &:before {
@@ -112,18 +113,7 @@
       &.active {
         display: block;
         opacity: 1;
-      }
-
-      &.logo {
-        &:before {
-          height: 80%;
-        }
-      }
-
-      &.graphics {
-        &:before {
-          height: 50%;
-        }
+        height: 100%;
       }
 
       li {
@@ -229,9 +219,23 @@
       display: none;
     }
 
+    &.active {
+      #{$this}__close-line {
+        opacity: 1;
+
+        &:first-child {
+          transform: rotate(45deg);
+        }
+  
+        &:last-child {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
     &:hover {
       #{$this}__close-line {
-        background-color: $dirty-white;
+        background-color: $bonfire-red;
       }
     }
 
@@ -245,16 +249,9 @@
       height: 23px;
       width: 1px;
       background-color: #979797;
+      opacity: 0;
       transform-origin: center;
-      transition: background-color 0.3s;
-
-      &:first-child {
-        transform: rotate(45deg);
-      }
-
-      &:last-child {
-        transform: rotate(-45deg);
-      }
+      transition: all 0.3s;
     }
   }
 }

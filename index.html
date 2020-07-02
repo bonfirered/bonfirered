@@ -13,10 +13,13 @@
   </head>
   <body>
     <div class="logo-lockup--vert">
-      <img class="logo" src="/assets/toolkit/images/logo--symbol.svg" alt="logo">
+      <a href="#landing">
+        <img class="logo" src="/assets/toolkit/images/logo--symbol.svg" alt="logo">
+      </a>
       <img class="diamond" src="/assets/toolkit/images/icon--diamond-half.svg" alt="diamond">
     </div>    <div class="section__nav" data-section-nav-parent="Our Brand">
-      <div class="section__nav-inner">
+      <div class="section__nav-inner section__nav-inner--title">
+        <div class="section__nav-block" data-section-nav-block></div>
         <div class="section__nav-subtitle title title--md" data-section-nav-title></div>
       </div>
       <div class="section__nav-inner">
@@ -66,7 +69,8 @@
         </ul>    <button type="button" class="section__nav-title title title--xs" data-open-nav>Our Brand</button>
       </div>
     </div>    <div class="section__nav" data-section-nav-parent="Brand Elements">
-      <div class="section__nav-inner">
+      <div class="section__nav-inner section__nav-inner--title">
+        <div class="section__nav-block" data-section-nav-block></div>
         <div class="section__nav-subtitle title title--md" data-section-nav-title></div>
       </div>
       <div class="section__nav-inner">
@@ -133,7 +137,8 @@
         </ul>    <button type="button" class="section__nav-title title title--xs" data-open-nav>Brand Elements</button>
       </div>
     </div>    <div class="section__nav" data-section-nav-parent="UI Toolkit">
-      <div class="section__nav-inner">
+      <div class="section__nav-inner section__nav-inner--title">
+        <div class="section__nav-block" data-section-nav-block></div>
         <div class="section__nav-subtitle title title--md" data-section-nav-title></div>
       </div>
       <div class="section__nav-inner">
@@ -400,7 +405,7 @@
       <img class="diamonds__item diamonds__item--3" src="/assets/toolkit/images/icon--diamond-3.png" data-diamond>
       <img class="diamonds__item diamonds__item--4" src="/assets/toolkit/images/icon--diamond-4.png" data-diamond>
 
-      <div id="brandPillarsCraftTitle" class="title title--lg">
+      <div id="brandPillarsCraftTitle" class="title title--lg" data-title>
         We're true to<br>the craft.
       </div>
       <p data-copy>Growth and greed is the enemy of craft and quality. We changed the playing field for ourselves, and anyone who wants to join us. Our goal is to show how a small, multi-disciplined team of creatives can outperform large behemoth agencies, creating award-winning work. And we can do that while providing competitive salaries, amazing benefits and incredible opportunities for individual growth for every associate.</p>
@@ -1154,10 +1159,10 @@
   <div class="section">
     <div class="section__content">
       <div class="grid grid--form">
-        <div class="grid__item form__item">
+        <div class="grid__item form__item" data-card>
           <input type="text" value="Text input - 1">
         </div>
-        <div class="grid__item form__item form__select">
+        <div class="grid__item form__item form__select" data-card>
           <select>
             <option>Select</option>
             <option>Option - 1</option>
@@ -1165,7 +1170,7 @@
             <option>Option - 3</option>
           </select>
         </div>
-        <div class="grid__item form__item typography__options">
+        <div class="grid__item form__item typography__options" data-card>
           <div class="typography__style">
             <select data-typography-style>
               <option value="regular">Regular</option>
@@ -1174,7 +1179,7 @@
           </div>
         </div>
       </div>
-      <div class="form__item">
+      <div class="form__item" data-card>
         <p>Checkbox</p>
         <fieldset>
           <input type="checkbox" id="checkbox1" value="checkbox1" checked>
@@ -1193,7 +1198,7 @@
           </label>
         </fieldset>
       </div>
-      <div class="form__item">
+      <div class="form__item" data-card>
         <p>Radio</p>
         <fieldset>
           <input type="radio" name="radio" id="radio1" value="radio1" checked>
@@ -1212,7 +1217,7 @@
           </label>
         </fieldset>
       </div>
-      <div class="form__item">
+      <div class="form__item" data-card>
         <div class="typography__options">
           <div class="typography__slider">
             <span class="typography__size"><span data-typography-value>32</span>px</span>
@@ -1220,7 +1225,7 @@
           </div>
         </div>
       </div>
-      <div class="form__item">
+      <div class="form__item" data-card>
         <textarea>Textarea</textarea>
       </div>
     </div>

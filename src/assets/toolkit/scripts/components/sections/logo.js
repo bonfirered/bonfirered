@@ -13,8 +13,8 @@ $(document).ready(() => {
   var controller = new ScrollMagic.Controller();
 
   // subtitle
-  var subtitle = new TimelineMax().fromTo($subtitle, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: .15 });
-
+  var subtitle = new TimelineMax().fromTo($subtitle, .2, { opacity: '0', y: '20' }, { opacity: '1', y: '0', ease: Linear.easeIn, delay: .2 });
+  
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
     .setTween(subtitle)
@@ -31,7 +31,7 @@ $(document).ready(() => {
     .reverse(false);
 
   // copy
-  var copy = new TimelineMax().fromTo($copy, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: .6 });
+  var copy = new TimelineMax().fromTo($copy, .2, { opacity: '0', y: '20' }, { opacity: '1', y: '0', ease: Linear.easeIn, delay: .6 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)

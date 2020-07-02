@@ -89,6 +89,10 @@ $(document).ready(() => {
 
   $navOpen.on('click', function () {
     $navOverlay.addClass('active');
+
+    setTimeout(function () {
+      $navClose.addClass('active');
+    }, 1300);
   });
 
   $navClose.on('click', function () {

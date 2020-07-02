@@ -12,7 +12,7 @@ $(document).ready(() => {
   var controller = new ScrollMagic.Controller();
 
   // subtitle
-  var subtitle = new TimelineMax().fromTo($subtitle, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: .1 });
+  var subtitle = new TimelineMax().fromTo($subtitle, .2, { opacity: '0', y: '20' }, { opacity: '1', y: '0', ease: Linear.easeIn, delay: .4 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
@@ -22,7 +22,7 @@ $(document).ready(() => {
 
   // title
   var mySplitText = new SplitText($('#guidingPrinciplesCoreTitle'), { type: 'words, chars' });
-  var title = new TimelineMax().staggerFrom(mySplitText.words, 0.4, { opacity: 0, ease: Linear.easeIn, delay: .2 }, 0.1);
+  var title = new TimelineMax().staggerFrom(mySplitText.words, 0.2, { opacity: 0, ease: Linear.easeIn, delay: .5 }, 0.1);
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
@@ -31,7 +31,7 @@ $(document).ready(() => {
     .reverse(false);
 
   // diamonds
-  var diamond = new TweenMax.staggerTo($diamond, .2, { opacity: '1', autoAlpha: 1, y: '0', yoyo: true, ease: Linear.easeIn, delay: .8 }, 0.15);
+  var diamond = new TweenMax.staggerTo($diamond, .2, { opacity: '1', autoAlpha: 1, y: '0', yoyo: true, ease: Linear.easeIn, delay: .9 }, 0.15);
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
@@ -40,7 +40,7 @@ $(document).ready(() => {
     .reverse(false);
 
   // copy
-  var copy = new TimelineMax().fromTo($copy, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: .6 });
+  var copy = new TimelineMax().fromTo($copy, .2, { opacity: '0' }, { opacity: '1', ease: Linear.easeIn, delay: .8 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)

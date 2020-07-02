@@ -24,7 +24,7 @@ $(document).ready(() => {
     .triggerHook(1)
     .reverse(false);
 
-  var lineTwo = new TimelineMax().fromTo($lineTwo, .6, { opacity: '0', left: 0 }, { opacity: '1', left: '58.3%', ease: Linear.easeIn, delay: .6 });
+  var lineTwo = new TimelineMax().fromTo($lineTwo, .8, { opacity: '0', right: 0 }, { opacity: '1', right: '800px', ease: Linear.easeIn, delay: .4 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
@@ -32,7 +32,7 @@ $(document).ready(() => {
     .triggerHook(1)
     .reverse(false);
 
-  var lineThree = new TimelineMax().fromTo($lineThree, .6, { opacity: '0', left: 0 }, { opacity: '1', left: '68.7%', ease: Linear.easeIn, delay: 1 });
+  var lineThree = new TimelineMax().fromTo($lineThree, .8, { opacity: '0', right: 0 }, { opacity: '1', right: '600px', ease: Linear.easeIn, delay: .6 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
@@ -40,7 +40,7 @@ $(document).ready(() => {
     .triggerHook(1)
     .reverse(false);
 
-  var lineFour = new TimelineMax().fromTo($lineFour, .6, { opacity: '0', left: 0 }, { opacity: '1', left: '79.1%', ease: Linear.easeIn, delay: 1.4 });
+  var lineFour = new TimelineMax().fromTo($lineFour, .8, { opacity: '0', right: 0 }, { opacity: '1', right: '400px', ease: Linear.easeIn, delay: .8 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
@@ -48,7 +48,7 @@ $(document).ready(() => {
     .triggerHook(1)
     .reverse(false);
   
-  var lineFive = new TimelineMax().fromTo($lineFive, .6, { opacity: '0', left: 0 }, { opacity: '1', left: '89.6%', ease: Linear.easeIn, delay: 1.8 });
+  var lineFive = new TimelineMax().fromTo($lineFive, .8, { opacity: '0', right: 0 }, { opacity: '1', right: '200px', ease: Linear.easeIn, delay: 1 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
