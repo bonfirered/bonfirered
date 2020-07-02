@@ -19,7 +19,7 @@ $(document).ready(() => {
 
   var controller = new ScrollMagic.Controller();
 
-  var navItem = new TweenMax.staggerTo($navItem, .2, { opacity: '1', y: '0', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: 1.6 }, 0.25);
+  var navItem = new TweenMax.staggerTo($navItem, .2, { opacity: '1', y: '0', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: 1.25 }, 0.05);
 
   new ScrollMagic.Scene({ triggerElement: $navItem.get(0) })
     .addTo(controller)

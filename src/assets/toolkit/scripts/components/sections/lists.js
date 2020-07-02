@@ -12,7 +12,7 @@ $(document).ready(() => {
   var controller = new ScrollMagic.Controller();
 
   // ordered subtitle
-  var subtitleO = new TimelineMax().fromTo($subtitleO, .2, { opacity: '0', y: '20' }, { opacity: '1', y: '0', ease: Linear.easeIn, delay: .15 });
+  var subtitleO = new TimelineMax().fromTo($subtitleO, .2, { opacity: '0', y: '20' }, { opacity: '1', y: '0', ease: Linear.easeIn, delay: .3 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
@@ -21,7 +21,7 @@ $(document).ready(() => {
     .reverse(false);
 
   // cards
-  var card = new TweenMax.staggerTo($card, .2, { opacity: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: .65 }, 0.35);
+  var card = new TweenMax.staggerTo($card, .2, { opacity: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: .35 }, 0.15);
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
@@ -30,7 +30,7 @@ $(document).ready(() => {
     .reverse(false);
 
   // unordered subtitle
-  var subtitleU = new TimelineMax().fromTo($subtitleU, .2, { opacity: '0', y: '20' }, { opacity: '1', y: '0', ease: Linear.easeIn, delay: 1.25 });
+  var subtitleU = new TimelineMax().fromTo($subtitleU, .2, { opacity: '0', y: '20' }, { opacity: '1', y: '0', ease: Linear.easeIn, delay: .7 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)

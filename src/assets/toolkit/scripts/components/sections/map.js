@@ -4,13 +4,13 @@ import TimelineMax from 'TimelineMax';
 import ScrollMagic from 'ScrollMagic';
 
 $(document).ready(() => {
-  const $section = $('[data-anchor="typography"]');
+  const $section = $('[data-anchor="map"]');
   const $card = $section.find('[data-card]');
 
   var controller = new ScrollMagic.Controller();
 
   // cards
-  var card = new TweenMax.staggerTo($card, .2, { opacity: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: .15 }, 0.15);
+  var card = new TimelineMax().fromTo($card, .2, { opacity: '0', y:'30', scale: '1.02'}, { opacity: '1', y: '0', scale: '1', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: .25 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)

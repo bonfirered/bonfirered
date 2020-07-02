@@ -48,3 +48,6 @@ require('./components/sections/cursor');
 require('./components/sections/navigationBar');
 require('./components/sections/lists');
 require('./components/sections/formElements');
+require('./components/sections/map');
+require('./components/sections/blockquote');
+require('./components/sections/supportingElements');
