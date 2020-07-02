@@ -141,12 +141,16 @@
         }
 
         a {
+          position: absolute;
+          margin-top: 2px;
           color: $dirty-white;
           font-family: $serif-italic;
           font-size: 12px;
           line-height: 12px;
           letter-spacing: 0.6px;
-          transition: color 0.3s;
+          opacity: 0;
+          transform: translateX(100%);
+          transition: all 0.3s;
 
           &:hover {
             color: $bonfire-red;
@@ -181,7 +185,7 @@
     z-index: -9999;
     background-color: rgba($ash-black, .98);
     transform: translateX(-100%);
-    transition: transform .25s;
+    transition: transform 1s;
 
     &.active {
       z-index: 9998;
@@ -190,12 +194,18 @@
 
     nav {
       position: absolute;
-      left: 30px;
+      left: 15px;
       min-height: 100vh;
       width: 100%;
 
       #{$this}__sub--inner {
         display: none;
+      }
+
+      li {
+        > a {
+          margin-left: 0 !important;
+        }
       }
     }
 
@@ -208,7 +218,7 @@
   &__close {
     position: relative;
     bottom: 127px;
-    left: 800px;
+    left: 810px;
     display: inline-block;
     height: 23px;
     width: 23px;

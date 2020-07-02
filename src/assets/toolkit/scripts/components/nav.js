@@ -9,7 +9,6 @@ $(document).ready(() => {
   const $navParent = $('[data-nav-parent]');
   const $navSub = $('[data-nav-sub]');
   const $navSubItem = $('[data-nav-sub] > li');
-  const $navSubSection = $('[data-nav-sub-section]');
   const $navOpen = $('[data-open-nav]');
   const $navClose = $('[data-close-nav]');
   const $navOverlay = $('[data-nav-overlay]');
@@ -20,7 +19,7 @@ $(document).ready(() => {
 
   var controller = new ScrollMagic.Controller();
 
-  var navItem = new TweenMax.staggerTo($navItem, .2, { opacity: '1', y: '0', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: 1.6 }, 0.25);
+  var navItem = new TweenMax.staggerTo($navItem, .2, { opacity: '1', y: '0', autoAlpha: 1, yoyo: true, ease: Linear.easeIn, delay: 1.25 }, 0.05);
 
   new ScrollMagic.Scene({ triggerElement: $navItem.get(0) })
     .addTo(controller)
@@ -70,7 +69,6 @@ $(document).ready(() => {
 
     if (href === hash) {
       $(this).children('a').addClass('active');
-      $(this).siblings().children('a').removeClass('active');
     }
   });
 
@@ -92,7 +90,7 @@ $(document).ready(() => {
 
     setTimeout(function () {
       $navClose.addClass('active');
-    }, 1300);
+    }, 1500);
   });
 
   $navClose.on('click', function () {
@@ -100,7 +98,7 @@ $(document).ready(() => {
   });
 
   // lines
-  var lineOne = new TimelineMax().fromTo($lineOne, .3, { opacity: '0', left: 0 }, { opacity: '1', left: '170px', ease: Linear.easeIn, delay: 2 });
+  var lineOne = new TimelineMax().fromTo($lineOne, .3, { opacity: '0', left: 0 }, { opacity: '1', left: '190px', ease: Linear.easeIn, delay: 2 });
 
   new ScrollMagic.Scene({ triggerElement: $lineOne.get(0) })
     .addTo(controller)
@@ -108,7 +106,7 @@ $(document).ready(() => {
     .triggerHook(1)
     .reverse(false);
 
-  var lineTwo = new TimelineMax().fromTo($lineTwo, .3, { opacity: '0', left: 0 }, { opacity: '1', left: '375px', ease: Linear.easeIn, delay: 2.4 });
+  var lineTwo = new TimelineMax().fromTo($lineTwo, .3, { opacity: '0', left: 0 }, { opacity: '1', left: '395px', ease: Linear.easeIn, delay: 2.4 });
 
   new ScrollMagic.Scene({ triggerElement: $lineTwo.get(0) })
     .addTo(controller)
@@ -116,7 +114,7 @@ $(document).ready(() => {
     .triggerHook(1)
     .reverse(false);
 
-  var lineThree = new TimelineMax().fromTo($lineThree, .3, { opacity: '0', left: 0 }, { opacity: '1', left: '570px', ease: Linear.easeIn, delay: 2.8 });
+  var lineThree = new TimelineMax().fromTo($lineThree, .3, { opacity: '0', left: 0 }, { opacity: '1', left: '590px', ease: Linear.easeIn, delay: 2.8 });
 
   new ScrollMagic.Scene({ triggerElement: $lineThree.get(0) })
     .addTo(controller)
@@ -124,7 +122,7 @@ $(document).ready(() => {
     .triggerHook(1)
     .reverse(false);
   
-  var lineFour = new TimelineMax().fromTo($lineFour, .3, { opacity: '0', left: 0 }, { opacity: '1', left: '770px', ease: Linear.easeIn, delay: 3.2 });
+  var lineFour = new TimelineMax().fromTo($lineFour, .3, { opacity: '0', left: 0 }, { opacity: '1', left: '790px', ease: Linear.easeIn, delay: 3.2 });
 
   new ScrollMagic.Scene({ triggerElement: $lineFour.get(0) })
     .addTo(controller)

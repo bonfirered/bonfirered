@@ -24,7 +24,7 @@ $(document).ready(() => {
     .triggerHook(1)
     .reverse(false);
 
-  var lineTwo = new TimelineMax().fromTo($lineTwo, .8, { opacity: '0', right: 0 }, { opacity: '1', right: '800px', ease: Linear.easeIn, delay: .4 });
+  var lineTwo = new TimelineMax().fromTo($lineTwo, .8, { opacity: '0', right: 0 }, { opacity: '1', right: '800px', ease: Linear.easeIn, delay: .3 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
@@ -32,7 +32,7 @@ $(document).ready(() => {
     .triggerHook(1)
     .reverse(false);
 
-  var lineThree = new TimelineMax().fromTo($lineThree, .8, { opacity: '0', right: 0 }, { opacity: '1', right: '600px', ease: Linear.easeIn, delay: .6 });
+  var lineThree = new TimelineMax().fromTo($lineThree, .8, { opacity: '0', right: 0 }, { opacity: '1', right: '600px', ease: Linear.easeIn, delay: .35 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
@@ -40,7 +40,7 @@ $(document).ready(() => {
     .triggerHook(1)
     .reverse(false);
 
-  var lineFour = new TimelineMax().fromTo($lineFour, .8, { opacity: '0', right: 0 }, { opacity: '1', right: '400px', ease: Linear.easeIn, delay: .8 });
+  var lineFour = new TimelineMax().fromTo($lineFour, .8, { opacity: '0', right: 0 }, { opacity: '1', right: '400px', ease: Linear.easeIn, delay: .4 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
@@ -48,7 +48,7 @@ $(document).ready(() => {
     .triggerHook(1)
     .reverse(false);
   
-  var lineFive = new TimelineMax().fromTo($lineFive, .8, { opacity: '0', right: 0 }, { opacity: '1', right: '200px', ease: Linear.easeIn, delay: 1 });
+  var lineFive = new TimelineMax().fromTo($lineFive, .8, { opacity: '0', right: 0 }, { opacity: '1', right: '200px', ease: Linear.easeIn, delay: .45 });
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
@@ -59,7 +59,7 @@ $(document).ready(() => {
   // title
   var mySplitText = new SplitText('[data-title-shuffle]', { type: 'words, chars' });
   TweenLite.set('[data-title-shuffle]', { perspective: 400 });
-  var title = new TimelineMax().staggerFrom(mySplitText.words, 0.2, { opacity: 0, ease: Linear.easeIn }, 0.05);
+  var title = new TimelineMax().staggerFrom(mySplitText.words, 0.2, { opacity: 0, ease: Linear.easeIn, delay: 1.25 }, 0.02);
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
@@ -68,7 +68,7 @@ $(document).ready(() => {
     .reverse(false);
 
   // diamonds
-  var diamond = new TweenMax.staggerTo($diamond, .2, { opacity: '1', autoAlpha: 1, y: '0', yoyo: true, ease: Linear.easeIn, delay: .3 }, 0.15);
+  var diamond = new TweenMax.staggerTo($diamond, .2, { opacity: '1', autoAlpha: 1, y: '0', yoyo: true, ease: Linear.easeIn, delay: 1.75 }, 0.15);
 
   new ScrollMagic.Scene({ triggerElement: $section.get(0) })
     .addTo(controller)
