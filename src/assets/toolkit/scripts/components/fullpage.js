@@ -59,6 +59,10 @@ $(document).ready(() => {
     
         if (hash.indexOf(nav) != -1) {
           $(this).addClass('active');
+
+          setTimeout(function () {
+            $('[data-nav-sub-section=' + nav + ']').find('a').css({'opacity': '1', 'transform': 'translateX(0)'});
+          }, 500);
         } else {
           $(this).removeClass('active');
         }
@@ -72,6 +76,7 @@ $(document).ready(() => {
         if (href === hash) {
           $(this).addClass('active');
           $(this).siblings().removeClass('active');
+          $(this).parent().parent().siblings().children('a').removeClass('active');
         }
       });
 
